@@ -78,17 +78,7 @@
         
         NSArray* content = [NSMutableArray arrayWithArray:[temp objectForKey:@"Content"]];
         _pageDataContent = [content copy];
-        // assign values
-        /*
-        self.personName = [temp objectForKey:@"Name"];
-        self.phoneNumbers = [NSMutableArray arrayWithArray:[temp objectForKey:@"Phones"]];
-        // display values
-        nameEntered.text = personName;
-        homePhone.text = [phoneNumbers objectAtIndex:0];
-        workPhone.text = [phoneNumbers objectAtIndex:1];
-        cellPhone.text = [phoneNumbers objectAtIndex:2];
-         */
-        
+                
     }
     return self;
 }
