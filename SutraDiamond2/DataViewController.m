@@ -18,6 +18,7 @@
 {
     [_dataLabel release];
     [_dataObject release];
+    [_dataObjectContent release];
     [super dealloc];
 }
 
@@ -25,6 +26,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    /*
+    NSURL *imgUrl=[[NSURL alloc] initWithString:@"http://img835.imageshack.us/img835/9794/screenshot20110802at345.png"];
+    NSData *imgData = [NSData dataWithContentsOfURL:imgUrl];
+    UIImage *img = [UIImage imageWithData:imgData];
+    
+    
+    [self.imageView setImage:img];
+    [self.dataView addSubview:self.imageView ];
+    [self.dataView sendSubviewToBack:self.imageView ];
+    
+    //[self.imageView release]; [imgUrl release];
+     */
+    //NSLog(@"viewDidLoad");
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +52,7 @@
 {
     [super viewWillAppear:animated];
     self.dataLabel.text = [self.dataObject description];
+    self.dataText.text = [self.dataObjectContent description];
 }
 
 @end

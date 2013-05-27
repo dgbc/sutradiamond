@@ -21,6 +21,7 @@
 
 @interface ModelController()
 @property (readonly, strong, nonatomic) NSArray *pageData;
+@property (readonly, strong, nonatomic) NSArray *pageDataContent;
 @end
 
 @implementation ModelController
@@ -36,14 +37,65 @@
     self = [super init];
     if (self) {
         // Create the data model.
-        NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        //NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+        //_pageData = [[dateFormatter monthSymbols] copy];
+        //NSLog(@"%@", _pageData);
+        
+        
+         // OLD DATA
+        /*
+        NSString *strings[3];
+        strings[0] = @"First";
+        strings[1] = @"Second";
+        strings[2] = @"Third";
+        
+        NSArray* pgData2 = [NSArray arrayWithObjects:strings count:3];
+        _pageData = [pgData2 copy];
+        //NSLog(@"%@",_pageData);
+         */
+        
+        // Data.plist code
+        NSBundle *thisBundle = [NSBundle mainBundle];
+        //NSLog(@"src: %@", [thisBundle pathForResource:@"SutraText" ofType:@"plist"]);
+        
+        NSString *plistPath = [thisBundle pathForResource:@"SutraText" ofType:@"plist"];
+
+        
+        // read property list into memory as an NSData object
+        NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+        NSString *errorDesc = nil;
+        NSPropertyListFormat format;
+        // convert static property liost into dictionary object
+        NSDictionary *temp = (NSDictionary *)[NSPropertyListSerialization propertyListFromData:plistXML mutabilityOption:NSPropertyListMutableContainersAndLeaves format:&format errorDescription:&errorDesc];
+        
+        if (!temp)
+        {
+            NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        }
+
+        NSArray* titles = [NSMutableArray arrayWithArray:[temp objectForKey:@"Title"]];
+        _pageData = [titles copy];
+        
+        NSArray* content = [NSMutableArray arrayWithArray:[temp objectForKey:@"Content"]];
+        _pageDataContent = [content copy];
+        // assign values
+        /*
+        self.personName = [temp objectForKey:@"Name"];
+        self.phoneNumbers = [NSMutableArray arrayWithArray:[temp objectForKey:@"Phones"]];
+        // display values
+        nameEntered.text = personName;
+        homePhone.text = [phoneNumbers objectAtIndex:0];
+        workPhone.text = [phoneNumbers objectAtIndex:1];
+        cellPhone.text = [phoneNumbers objectAtIndex:2];
+         */
+        
     }
     return self;
 }
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
-{   
+{
+    //NSLog(@"%@",self.pageData);
     // Return the data view controller for the given index.
     if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
         return nil;
@@ -52,6 +104,7 @@
     // Create a new view controller and pass suitable data.
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     dataViewController.dataObject = self.pageData[index];
+    dataViewController.dataObjectContent = self.pageDataContent[index];
     return dataViewController;
 }
 

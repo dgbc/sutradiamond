@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61CFECD1753A62300402462 /* SutraText.plist in Resources */ = {isa = PBXBuildFile; fileRef = C61CFECC1753A62300402462 /* SutraText.plist */; };
 		C6727E6B174E656D0012CD32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6727E6A174E656D0012CD32 /* UIKit.framework */; };
 		C6727E6D174E656D0012CD32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6727E6C174E656D0012CD32 /* Foundation.framework */; };
 		C6727E6F174E656D0012CD32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6727E6E174E656D0012CD32 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C61CFECC1753A62300402462 /* SutraText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SutraText.plist; sourceTree = "<group>"; };
 		C6727E67174E656D0012CD32 /* SutraDiamond2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SutraDiamond2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6727E6A174E656D0012CD32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6727E6C174E656D0012CD32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 				C6727E7C174E656D0012CD32 /* Default.png */,
 				C6727E7E174E656D0012CD32 /* Default@2x.png */,
 				C6727E80174E656D0012CD32 /* Default-568h@2x.png */,
+				C61CFECC1753A62300402462 /* SutraText.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				C6727E7F174E656D0012CD32 /* Default@2x.png in Resources */,
 				C6727E81174E656D0012CD32 /* Default-568h@2x.png in Resources */,
 				C6727E8D174E656D0012CD32 /* MainStoryboard.storyboard in Resources */,
+				C61CFECD1753A62300402462 /* SutraText.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +228,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Conta Desenvolvedor";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Conta Desenvolvedor";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -237,8 +242,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -254,14 +261,17 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Conta Desenvolvedor";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Conta Desenvolvedor";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -273,6 +283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SutraDiamond2/SutraDiamond2-Prefix.pch";
 				INFOPLIST_FILE = "SutraDiamond2/SutraDiamond2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -284,6 +295,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SutraDiamond2/SutraDiamond2-Prefix.pch";
 				INFOPLIST_FILE = "SutraDiamond2/SutraDiamond2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -308,6 +320,7 @@
 				C6727E92174E656D0012CD32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
