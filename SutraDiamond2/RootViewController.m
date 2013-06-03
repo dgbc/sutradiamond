@@ -19,7 +19,7 @@
 @implementation RootViewController
 
 @synthesize modelController = _modelController;
-@synthesize message;
+//@synthesize message;
 
 - (void)dealloc
 {
@@ -36,7 +36,8 @@
     self.pageViewController = [[[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil] autorelease];
     self.pageViewController.delegate = self;
 
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    //DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:self.selected_page storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 
@@ -53,7 +54,7 @@
 
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    NSLog(@"%@",message);
+    //NSLog(@"==> %d", self.selected_page);
 }
 
 - (void)didReceiveMemoryWarning

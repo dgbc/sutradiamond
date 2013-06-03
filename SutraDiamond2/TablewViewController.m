@@ -12,6 +12,8 @@
 
 @end
 
+//@synthesize selectedRow;
+
 @implementation TablewViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -154,6 +156,7 @@
     
     //NSLog(@"init...? ");
     //[self performSegueWithIdentifier:@"TBV1" sender:self];
+    //self.selectedRow = [indexPath row];
 }
 
 - (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated {
@@ -174,16 +177,20 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"SEGUE2");
-    NSLog(@"%@",[segue identifier]);
+    //NSLog(@"SEGUE2");
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    //NSLog(@"%d",path.row);
+    
     if([segue.identifier isEqualToString:@"TBV1"])
     {
         
-        NSString *message = @"Tapped on home";
+        //NSString *message = @"Tapped on home";
         RootViewController *vc = [segue destinationViewController];
-        vc.message = message;
+        //vc.message = message;
+        vc.selected_page = path.row;
+        //NSLog(@"%d",  self.selectedRow);
         
-        NSLog(@"EE");
+        //NSLog(@"EE");
     }
 }
 

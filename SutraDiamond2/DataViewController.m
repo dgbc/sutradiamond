@@ -53,6 +53,20 @@
     [super viewWillAppear:animated];
     self.dataLabel.text = [self.dataObject description];
     self.dataText.text = [self.dataObjectContent description];
+    
+     NSString *someHtmlContent = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body {padding: 0px; margin: 0px; }</style><script src=\"yourLocalJsFile.js\"></script></head><body>%@<strong>%@</strong></body></html>", @"Hello", @"Hello2"];
+     
+     NSLog(@"HTML with code: \n%@", someHtmlContent);
+    
+     NSString *resourcePath = [[[[NSBundle mainBundle] resourcePath]
+     stringByReplacingOccurrencesOfString:@"/" withString:@"//"]
+     stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+     
+     [self.webView loadHTMLString:someHtmlContent baseURL:[NSURL URLWithString:
+     [NSString stringWithFormat:@"file:/%@//", resourcePath]]];
+     
+     //[self.webView setDelegate:self];
+
 }
 
 @end

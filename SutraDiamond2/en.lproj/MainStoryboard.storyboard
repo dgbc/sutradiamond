@@ -19,17 +19,35 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-8f-Jo0">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-8f-Jo0">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="288" id="iiG-iF-2qb"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="GillSans"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEz-jT-Obj">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="235" id="mEF-Co-hqx"/>
+                                            <constraint firstAttribute="width" constant="152" id="qcU-Ux-mTk"/>
+                                        </constraints>
+                                    </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="TZI-8f-Jo0" firstAttribute="bottom" secondItem="9" secondAttribute="bottom" type="default" id="9UR-ab-yan"/>
+                                    <constraint firstItem="IEz-jT-Obj" firstAttribute="leading" secondItem="9" secondAttribute="leading" type="default" id="S7S-0s-yrX"/>
                                     <constraint firstItem="TZI-8f-Jo0" firstAttribute="leading" secondItem="9" secondAttribute="leading" type="default" id="WCN-rW-pFw"/>
+                                    <constraint firstAttribute="bottom" secondItem="IEz-jT-Obj" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="lTK-xQ-NHg"/>
                                     <constraint firstItem="TZI-8f-Jo0" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" type="default" id="lj0-7c-PbQ"/>
                                     <constraint firstItem="TZI-8f-Jo0" firstAttribute="top" secondItem="9" secondAttribute="top" type="default" id="s2W-Ml-WLK"/>
                                 </constraints>
@@ -63,11 +81,11 @@
                             <constraint firstItem="ybg-ej-hIG" firstAttribute="top" secondItem="6" secondAttribute="top" type="default" id="Ewe-7h-B9d"/>
                             <constraint firstItem="9" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" type="default" id="LUk-nJ-dIk"/>
                             <constraint firstItem="yWX-zP-1El" firstAttribute="bottom" secondItem="6" secondAttribute="bottom" type="default" id="a5E-Ke-Cmp"/>
-                            <constraint firstItem="ybg-ej-hIG" firstAttribute="centerX" secondItem="10" secondAttribute="centerX" type="default" id="bCI-gD-wlj"/>
+                            <constraint firstItem="yWX-zP-1El" firstAttribute="trailing" secondItem="ybg-ej-hIG" secondAttribute="trailing" type="default" id="bas-nV-wJd"/>
                             <constraint firstItem="9" firstAttribute="leading" secondItem="10" secondAttribute="leading" type="default" id="cxM-os-1cB"/>
                             <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="8" type="user" id="e6E-Yf-T9W"/>
-                            <constraint firstItem="10" firstAttribute="top" secondItem="6" secondAttribute="top" constant="8" id="fgp-m5-u7A"/>
                             <constraint firstItem="10" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="8" type="user" id="l5K-zv-Glu"/>
+                            <constraint firstItem="9" firstAttribute="top" secondItem="6" secondAttribute="top" constant="34" id="lkO-g7-0G9"/>
                             <constraint firstItem="yWX-zP-1El" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" type="default" id="n96-f4-Wmo"/>
                             <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y0d-Yn-SIr"/>
                         </constraints>
@@ -76,13 +94,14 @@
                         <outlet property="dataLabel" destination="10" id="11"/>
                         <outlet property="dataText" destination="TZI-8f-Jo0" id="5YT-0I-Cp3"/>
                         <outlet property="imageView" destination="ybg-ej-hIG" id="Vvo-QL-Z5o"/>
+                        <outlet property="webView" destination="IEz-jT-Obj" id="1vn-eu-C0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="586" y="468"/>
         </scene>
-        <!--Tablew View Controller - Root View Controller-->
+        <!--Tablew View Controller - Sutra Diamond-->
         <scene sceneID="hpA-zf-iiR">
             <objects>
                 <tableViewController id="gQi-Ul-TaI" customClass="TablewViewController" sceneMemberID="viewController">
@@ -105,7 +124,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="q9C-0P-tHJ"/>
+                    <navigationItem key="navigationItem" title="Sutra Diamond" id="q9C-0P-tHJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qg8-MA-csK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +169,7 @@
                 <relationship kind="outlet" name="dataText" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="dataView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

@@ -11,4 +11,5 @@
 
 @interface TablewViewController : UITableViewController
 @property (readonly, strong, nonatomic) NSArray *pageData;
+@property (nonatomic) NSInteger selectedRow;
 @end
