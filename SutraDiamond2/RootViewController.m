@@ -57,9 +57,6 @@
 
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    NSLog(@"==> %d", self.selected_page);
-    //NSLog(@"%@", self.modelController.pageData[self.selected_page]);
-    //self.navigationItem2.title = self.modelController.pageData[self.selected_page];
     self.navigationItem2.title = [[NSString alloc] initWithFormat:@"Chapter %d", self.selected_page+1];
 }
 

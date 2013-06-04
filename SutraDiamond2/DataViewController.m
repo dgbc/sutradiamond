@@ -64,7 +64,7 @@
     //NSLog(@"%@", self.parentViewController.navigationItem.title);
     
     //self.parentViewController.navigationItem.title = @"AAAA";
-    NSLog(@"%@",self.parentViewController.navigationController.navigationItem);
+    //NSLog(@"%@",self.parentViewController.navigationController.navigationItem);
     NSString *resourcePath = [[[[[NSBundle mainBundle] resourcePath]
                                 stringByReplacingOccurrencesOfString:@"/" withString:@"//"]
                                stringByReplacingOccurrencesOfString:@" " withString:@"%20"]
