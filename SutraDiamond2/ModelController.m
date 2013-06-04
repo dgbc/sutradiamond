@@ -20,8 +20,8 @@
  */
 
 @interface ModelController()
-@property (readonly, strong, nonatomic) NSArray *pageData;
-@property (readonly, strong, nonatomic) NSArray *pageDataContent;
+//@property (readonly, strong, nonatomic) NSArray *pageData;
+//@property (readonly, strong, nonatomic) NSArray *pageDataContent;
 @end
 
 @implementation ModelController

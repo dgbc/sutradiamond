@@ -52,21 +52,27 @@
 {
     [super viewWillAppear:animated];
     self.dataLabel.text = [self.dataObject description];
-    self.dataText.text = [self.dataObjectContent description];
+    //self.dataText.text = [self.dataObjectContent description];
     
-     NSString *someHtmlContent = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body {padding: 0px; margin: 0px; }</style><script src=\"yourLocalJsFile.js\"></script></head><body>%@<strong>%@</strong></body></html>", @"Hello", @"Hello2"];
+     NSString *someHtmlContent = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body {padding: 0px; margin: 0px; font-family: 'Gill Sans', Arial; font-size: 15px; }</style><script src=\"yourLocalJsFile.js\"></script></head><body>%@</body></html>", [self.dataObjectContent description]];
      
-     NSLog(@"HTML with code: \n%@", someHtmlContent);
+     //NSLog(@"HTML with code: \n%@", someHtmlContent);
+    //self._navigationItem.title = @"Hello";
+    //self.navigationItem.title = @"Hello";
+    //self.navigationController.navigationItem.title = @"eeee";
+    //NSLog(@"%@", self.dataObject);
+    //NSLog(@"%@", self.parentViewController.navigationItem.title);
     
-     NSString *resourcePath = [[[[NSBundle mainBundle] resourcePath]
+    self.parentViewController.navigationItem.title = @"AAAA";
+    
+     NSString *resourcePath = [[[[[NSBundle mainBundle] resourcePath]
      stringByReplacingOccurrencesOfString:@"/" withString:@"//"]
-     stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+     stringByReplacingOccurrencesOfString:@" " withString:@"%20"] stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"];
      
      [self.webView loadHTMLString:someHtmlContent baseURL:[NSURL URLWithString:
      [NSString stringWithFormat:@"file:/%@//", resourcePath]]];
      
      //[self.webView setDelegate:self];
-
 }
 
 @end

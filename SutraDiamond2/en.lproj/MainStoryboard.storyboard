@@ -19,44 +19,23 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-8f-Jo0">
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="288" id="iiG-iF-2qb"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="GillSans"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEz-jT-Obj">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="235" id="mEF-Co-hqx"/>
-                                            <constraint firstAttribute="width" constant="152" id="qcU-Ux-mTk"/>
-                                        </constraints>
                                     </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="IEz-jT-Obj" firstAttribute="leading" secondItem="9" secondAttribute="leading" type="default" id="S7S-0s-yrX"/>
-                                    <constraint firstItem="TZI-8f-Jo0" firstAttribute="leading" secondItem="9" secondAttribute="leading" type="default" id="WCN-rW-pFw"/>
-                                    <constraint firstAttribute="bottom" secondItem="IEz-jT-Obj" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="lTK-xQ-NHg"/>
-                                    <constraint firstItem="TZI-8f-Jo0" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" type="default" id="lj0-7c-PbQ"/>
-                                    <constraint firstItem="TZI-8f-Jo0" firstAttribute="top" secondItem="9" secondAttribute="top" type="default" id="s2W-Ml-WLK"/>
+                                    <constraint firstItem="IEz-jT-Obj" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" type="default" id="fvh-ls-0wN"/>
+                                    <constraint firstItem="IEz-jT-Obj" firstAttribute="top" secondItem="9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="swL-p3-yaY"/>
+                                    <constraint firstItem="IEz-jT-Obj" firstAttribute="bottom" secondItem="9" secondAttribute="bottom" type="default" id="uy1-Jk-qgU"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="10">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="MzM-iy-R2J"/>
+                                    <constraint firstAttribute="height" constant="39" id="4NW-e0-OAN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -80,19 +59,18 @@
                             <constraint firstItem="yWX-zP-1El" firstAttribute="leading" secondItem="6" secondAttribute="leading" type="default" id="68A-Op-AIL"/>
                             <constraint firstItem="ybg-ej-hIG" firstAttribute="top" secondItem="6" secondAttribute="top" type="default" id="Ewe-7h-B9d"/>
                             <constraint firstItem="9" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" type="default" id="LUk-nJ-dIk"/>
+                            <constraint firstItem="9" firstAttribute="top" secondItem="6" secondAttribute="top" constant="34" id="Qp9-HB-cVL"/>
                             <constraint firstItem="yWX-zP-1El" firstAttribute="bottom" secondItem="6" secondAttribute="bottom" type="default" id="a5E-Ke-Cmp"/>
-                            <constraint firstItem="yWX-zP-1El" firstAttribute="trailing" secondItem="ybg-ej-hIG" secondAttribute="trailing" type="default" id="bas-nV-wJd"/>
                             <constraint firstItem="9" firstAttribute="leading" secondItem="10" secondAttribute="leading" type="default" id="cxM-os-1cB"/>
                             <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="8" type="user" id="e6E-Yf-T9W"/>
+                            <constraint firstItem="10" firstAttribute="top" secondItem="6" secondAttribute="top" constant="8" id="fxy-DO-c5M"/>
+                            <constraint firstItem="ybg-ej-hIG" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" type="default" id="hUG-ZE-vhM"/>
                             <constraint firstItem="10" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="8" type="user" id="l5K-zv-Glu"/>
-                            <constraint firstItem="9" firstAttribute="top" secondItem="6" secondAttribute="top" constant="34" id="lkO-g7-0G9"/>
                             <constraint firstItem="yWX-zP-1El" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" type="default" id="n96-f4-Wmo"/>
-                            <constraint firstItem="9" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="y0d-Yn-SIr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dataLabel" destination="10" id="11"/>
-                        <outlet property="dataText" destination="TZI-8f-Jo0" id="5YT-0I-Cp3"/>
                         <outlet property="imageView" destination="ybg-ej-hIG" id="Vvo-QL-Z5o"/>
                         <outlet property="webView" destination="IEz-jT-Obj" id="1vn-eu-C0y"/>
                     </connections>
@@ -124,7 +102,9 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sutra Diamond" id="q9C-0P-tHJ"/>
+                    <navigationItem key="navigationItem" title="Sutra Diamond" id="q9C-0P-tHJ">
+                        <barButtonItem key="backBarButtonItem" title="Index" id="aOg-nc-Qky"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qg8-MA-csK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +135,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mvT-pm-glj"/>
+                    <connections>
+                        <outlet property="navigationItem" destination="mvT-pm-glj" id="lyf-i9-t5e"/>
+                        <outlet property="navigationItem2" destination="mvT-pm-glj" id="m5O-YX-Pfj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,6 +164,9 @@
         </class>
         <class className="RootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navigationItem2" candidateClass="UINavigationItem"/>
+            </relationships>
         </class>
         <class className="TablewViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TablewViewController.h"/>
