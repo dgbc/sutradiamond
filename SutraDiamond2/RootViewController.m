@@ -37,7 +37,10 @@
     self.pageViewController.delegate = self;
 
     //DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:self.selected_page storyboard:self.storyboard];
+    //DataViewController *startingViewController = [self.modelController viewControllerAtIndex:self.selected_page storyboard:self.storyboard];
+    
+    DataViewController *startingViewController = [self.modelController viewControllerAtIndex:self.selected_page storyboard:self.storyboard navigationItem:self.navigationItem2];
+    
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 
@@ -54,7 +57,7 @@
 
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    //NSLog(@"==> %d", self.selected_page);
+    NSLog(@"==> %d", self.selected_page);
     //NSLog(@"%@", self.modelController.pageData[self.selected_page]);
     //self.navigationItem2.title = self.modelController.pageData[self.selected_page];
     self.navigationItem2.title = [[NSString alloc] initWithFormat:@"Chapter %d", self.selected_page+1];

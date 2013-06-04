@@ -22,6 +22,7 @@
 @interface ModelController()
 //@property (readonly, strong, nonatomic) NSArray *pageData;
 //@property (readonly, strong, nonatomic) NSArray *pageDataContent;
+@property (strong, nonatomic) UINavigationItem *navigationItem;
 @end
 
 @implementation ModelController
@@ -98,6 +99,21 @@
     return dataViewController;
 }
 
+- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard navigationItem:(UINavigationItem *)navigationItem
+{
+    //NSLog(@"%@",self.pageData);
+    // Return the data view controller for the given index.
+    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
+        return nil;
+    }
+    self.navigationItem = navigationItem;
+    // Create a new view controller and pass suitable data.
+    DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    dataViewController.dataObject = self.pageData[index];
+    dataViewController.dataObjectContent = self.pageDataContent[index];
+    return dataViewController;
+}
+
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController
 {   
      // Return the index of the given data view controller.
@@ -113,8 +129,8 @@
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
-    
     index--;
+    self.navigationItem.title = [[NSString alloc]initWithFormat:@"Chapter %d",index+1 ];
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
 
@@ -124,8 +140,8 @@
     if (index == NSNotFound) {
         return nil;
     }
-    
     index++;
+    self.navigationItem.title = [[NSString alloc]initWithFormat:@"Chapter %d",index+1 ];
     if (index == [self.pageData count]) {
         return nil;
     }

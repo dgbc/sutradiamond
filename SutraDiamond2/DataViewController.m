@@ -54,7 +54,7 @@
     self.dataLabel.text = [self.dataObject description];
     //self.dataText.text = [self.dataObjectContent description];
     
-     NSString *someHtmlContent = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body {padding: 0px; margin: 0px; font-family: 'Gill Sans', Arial; font-size: 15px; }</style><script src=\"yourLocalJsFile.js\"></script></head><body>%@</body></html>", [self.dataObjectContent description]];
+    NSString *someHtmlContent = [NSString stringWithFormat:@"<html><head><style type=\"text/css\">body {padding: 0px; margin: 0px; font-family: 'Gill Sans', Arial; font-size: 15px; }</style><script src=\"yourLocalJsFile.js\"></script></head><body>%@</body></html>", [self.dataObjectContent description]];
      
      //NSLog(@"HTML with code: \n%@", someHtmlContent);
     //self._navigationItem.title = @"Hello";
@@ -63,14 +63,15 @@
     //NSLog(@"%@", self.dataObject);
     //NSLog(@"%@", self.parentViewController.navigationItem.title);
     
-    self.parentViewController.navigationItem.title = @"AAAA";
-    
-     NSString *resourcePath = [[[[[NSBundle mainBundle] resourcePath]
-     stringByReplacingOccurrencesOfString:@"/" withString:@"//"]
-     stringByReplacingOccurrencesOfString:@" " withString:@"%20"] stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"];
+    //self.parentViewController.navigationItem.title = @"AAAA";
+    NSLog(@"%@",self.parentViewController.navigationController.navigationItem);
+    NSString *resourcePath = [[[[[NSBundle mainBundle] resourcePath]
+                                stringByReplacingOccurrencesOfString:@"/" withString:@"//"]
+                               stringByReplacingOccurrencesOfString:@" " withString:@"%20"]
+                              stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"];
      
-     [self.webView loadHTMLString:someHtmlContent baseURL:[NSURL URLWithString:
-     [NSString stringWithFormat:@"file:/%@//", resourcePath]]];
+    [self.webView loadHTMLString:someHtmlContent baseURL:[NSURL URLWithString:
+    [NSString stringWithFormat:@"file:/%@//", resourcePath]]];
      
      //[self.webView setDelegate:self];
 }

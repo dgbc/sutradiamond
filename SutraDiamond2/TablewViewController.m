@@ -169,7 +169,7 @@
     
     NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     for (int i=1; i<=16; i++) {
-        [tempArray addObject:[NSString stringWithFormat:@"%d",i]];
+        [tempArray addObject:[NSString stringWithFormat:@"%d",i*2]];
          
     }    
     return tempArray;
