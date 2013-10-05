@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIView *dataView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (strong, nonatomic) id dataObject;
 @property (strong, nonatomic) id dataObjectContent;
 

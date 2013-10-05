@@ -22,6 +22,9 @@
 		C6727E87174E656D0012CD32 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6727E86174E656D0012CD32 /* DataViewController.m */; };
 		C6727E8A174E656D0012CD32 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6727E89174E656D0012CD32 /* ModelController.m */; };
 		C6727E8D174E656D0012CD32 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6727E8B174E656D0012CD32 /* MainStoryboard.storyboard */; };
+		C6D262A517FFA1FF00D627DD /* MyCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D262A417FFA1FF00D627DD /* MyCustomNavigationBar.m */; };
+		C6D262A817FFA7BA00D627DD /* NavBar-Cardboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D262A617FFA7BA00D627DD /* NavBar-Cardboard.png */; };
+		C6D262A917FFA7BA00D627DD /* NavBar-Cardboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D262A717FFA7BA00D627DD /* NavBar-Cardboard@2x.png */; };
 		C6FCA9A01753DB5E00BB5C96 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FCA99F1753DB5E00BB5C96 /* NavigationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,10 @@
 		C6727E88174E656D0012CD32 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		C6727E89174E656D0012CD32 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		C6727E8C174E656D0012CD32 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C6D262A317FFA1FF00D627DD /* MyCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomNavigationBar.h; sourceTree = "<group>"; };
+		C6D262A417FFA1FF00D627DD /* MyCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomNavigationBar.m; sourceTree = "<group>"; };
+		C6D262A617FFA7BA00D627DD /* NavBar-Cardboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar-Cardboard.png"; sourceTree = "<group>"; };
+		C6D262A717FFA7BA00D627DD /* NavBar-Cardboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar-Cardboard@2x.png"; sourceTree = "<group>"; };
 		C6FCA99E1753DB5E00BB5C96 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		C6FCA99F1753DB5E00BB5C96 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +118,8 @@
 				C61CFED31753CE4400402462 /* TablewViewController.m */,
 				C6FCA99E1753DB5E00BB5C96 /* NavigationViewController.h */,
 				C6FCA99F1753DB5E00BB5C96 /* NavigationViewController.m */,
+				C6D262A317FFA1FF00D627DD /* MyCustomNavigationBar.h */,
+				C6D262A417FFA1FF00D627DD /* MyCustomNavigationBar.m */,
 			);
 			path = SutraDiamond2;
 			sourceTree = "<group>";
@@ -118,6 +127,8 @@
 		C6727E71174E656D0012CD32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6D262A617FFA7BA00D627DD /* NavBar-Cardboard.png */,
+				C6D262A717FFA7BA00D627DD /* NavBar-Cardboard@2x.png */,
 				C6727E72174E656D0012CD32 /* SutraDiamond2-Info.plist */,
 				C6727E73174E656D0012CD32 /* InfoPlist.strings */,
 				C6727E76174E656D0012CD32 /* main.m */,
@@ -187,6 +198,8 @@
 				C6727E81174E656D0012CD32 /* Default-568h@2x.png in Resources */,
 				C6727E8D174E656D0012CD32 /* MainStoryboard.storyboard in Resources */,
 				C61CFECD1753A62300402462 /* SutraText.plist in Resources */,
+				C6D262A817FFA7BA00D627DD /* NavBar-Cardboard.png in Resources */,
+				C6D262A917FFA7BA00D627DD /* NavBar-Cardboard@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +217,7 @@
 				C6727E8A174E656D0012CD32 /* ModelController.m in Sources */,
 				C61CFED41753CE4400402462 /* TablewViewController.m in Sources */,
 				C6FCA9A01753DB5E00BB5C96 /* NavigationViewController.m in Sources */,
+				C6D262A517FFA1FF00D627DD /* MyCustomNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

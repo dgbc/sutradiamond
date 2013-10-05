@@ -83,10 +83,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     //[cell.textLabel setText:[NSString stringWithFormat:@"Row %i in Section %i", [indexPath row], [indexPath section]]];
     [cell.textLabel setText:[NSString stringWithFormat:@"%i. %@", [indexPath row]+1, [_pageData objectAtIndex:indexPath.row]]];
+    
+    [cell setFont:[UIFont fontWithName:@"Helvetica" size:18.0]];
     //cell.textLabel.text = @"ETC";
     // Configure the cell...
     
@@ -192,6 +195,47 @@
         
         //NSLog(@"EE");
     }
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
+      UITextAttributeTextColor,
+      [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
+      UITextAttributeTextShadowColor,
+      [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
+      UITextAttributeTextShadowOffset,
+      [UIFont fontWithName:@"SnellRoundhand-Bold" size:25.0],
+      UITextAttributeFont,
+      nil]
+     
+     ];
+//
+//    NSString* titleText = self.navigationController.navigationItem.title;
+//    UIFont* titleFont = [UIFont fontWithName:@"Helvetica" size:30];
+//    CGSize requestedTitleSize = [titleText sizeWithFont:titleFont];
+//    CGFloat titleWidth = MIN(30, requestedTitleSize.width);
+    
+  
+    /*List fonts*/
+//    NSMutableString *str = [NSMutableString stringWithCapacity:1000];
+//    for (NSString *familyName in [UIFont familyNames]) {
+//        [str appendFormat:@"%@\n", familyName];
+//        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//            [str appendFormat:@"    %@\n", fontName];
+//        }
+//        [str appendString:@"\n"];
+//    }
+//    NSLog(@"%@", str);
+//
+//    [UIColor blackColor], UITextAttributeTextColor,
+//    [UIFont fontWithName:@"Snell Roundhand Bold" size:23.0], UITextAttributeFont,nil]
+//
 }
 
 @end
