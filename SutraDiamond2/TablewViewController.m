@@ -56,6 +56,16 @@
     NSArray* titles = [NSMutableArray arrayWithArray:[temp objectForKey:@"Title"]];
     _pageData = [titles copy];
     
+    
+    self.title = @"The Sutra Diamond";
+    UILabel* tlabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0, 200, 40)];
+    tlabel.text=self.navigationItem.title;
+    tlabel.textColor=[UIColor whiteColor];
+    tlabel.font = [UIFont fontWithName:@"SnellRoundhand-Bold" size: 32.0];
+    tlabel.backgroundColor =[UIColor clearColor];
+    tlabel.adjustsFontSizeToFitWidth=YES;
+    self.navigationItem.titleView=tlabel;
+    
 }
 
 - (void)didReceiveMemoryWarning
