@@ -3,14 +3,11 @@ sutradiamond
 
 Sutra Diamond book for iOS.
 
-.. image:: https://github.com/dgbc/sutradiamond/raw/master/screen1.png
-   :align: left
+![alt tag](https://github.com/dgbc/sutradiamond/raw/master/screen1.png)
 
-.. image:: https://github.com/dgbc/sutradiamond/raw/master/screen2.png
-   :align: left
+![alt tag](https://github.com/dgbc/sutradiamond/raw/master/screen2.png)
 
-.. image:: https://github.com/dgbc/sutradiamond/raw/master/screen3.png
-   :align: left
+![alt tag](https://github.com/dgbc/sutradiamond/raw/master/screen3.png)
 
 
 License
